@@ -187,27 +187,27 @@ public class InteresSimple extends javax.swing.JFrame {
             case 0:
                 double intSimple = 0;
                 intSimple = Double.parseDouble(this.textVA.getText())*Double.parseDouble(this.textNper.getText())*Double.parseDouble(this.textI.getText());
-                this.textResultado.setText(String.valueOf(intSimple));
+                this.textResultado.setText(String.format("%.2f",intSimple));
                 break;
             case 1:
                 double va = 0;
                 va = Double.parseDouble(this.textVF.getText())/(1+(Double.parseDouble(this.textNper.getText())*Double.parseDouble(this.textI.getText())));
-                this.textResultado.setText(String.valueOf(va));
+                this.textResultado.setText(String.format("%.2f",va));
                 break;
             case 2:
                 double vf = 0;
                 vf = Double.parseDouble(this.textVA.getText())*(1+(Double.parseDouble(this.textNper.getText())*Double.parseDouble(this.textI.getText())));
-                this.textResultado.setText(String.valueOf(vf));
+                this.textResultado.setText(String.format("%.2f",vf));
                 break;
             case 3:
                 double nper = 0;
                 nper = ((Double.parseDouble(this.textVF.getText())/Double.parseDouble(this.textVA.getText()))-1)/Double.parseDouble(this.textI.getText());
-                this.textResultado.setText(String.valueOf(nper));
+                this.textResultado.setText(String.format("%.2f",nper));
                 break;
             case 4:
                 double i = 0;
                 i = ((Double.parseDouble(this.textVF.getText())/Double.parseDouble(this.textVA.getText()))-1)/Double.parseDouble(this.textNper.getText());
-                this.textResultado.setText(String.valueOf(i));
+                this.textResultado.setText(String.format("%.2f",i));
                 break;
         }
         // TODO add your handling code here:

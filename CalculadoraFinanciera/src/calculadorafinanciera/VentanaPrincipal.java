@@ -42,6 +42,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
 
         btnCompuesto.setText("Interes Compuesto");
+        btnCompuesto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCompuestoActionPerformed(evt);
+            }
+        });
 
         btnAnualidades.setText("Anualidades");
 
@@ -77,6 +82,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         iSimple.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSimpleActionPerformed
+
+    private void btnCompuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompuestoActionPerformed
+        InteresCompuesto iCompuesto = new InteresCompuesto();
+        iCompuesto.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCompuestoActionPerformed
 
     /**
      * @param args the command line arguments
