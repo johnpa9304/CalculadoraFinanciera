@@ -49,6 +49,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
 
         btnAnualidades.setText("Anualidades");
+        btnAnualidades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnualidadesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,6 +93,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         iCompuesto.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnCompuestoActionPerformed
+
+    private void btnAnualidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnualidadesActionPerformed
+        VentanaAnualidades anualidad = new VentanaAnualidades();
+        anualidad.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAnualidadesActionPerformed
 
     /**
      * @param args the command line arguments

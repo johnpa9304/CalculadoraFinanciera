@@ -35,7 +35,7 @@ public class VentanaTasa extends javax.swing.JFrame {
         btnCalcular = new javax.swing.JButton();
         txtR = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         jLabel1.setText("Tasa Equivalente");
