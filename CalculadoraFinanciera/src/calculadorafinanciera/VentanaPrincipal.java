@@ -30,6 +30,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnSimple = new javax.swing.JToggleButton();
         btnCompuesto = new javax.swing.JToggleButton();
         btnAnualidades = new javax.swing.JToggleButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora Financiera");
@@ -55,6 +56,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Bonos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,19 +72,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCompuesto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSimple, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAnualidades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnAnualidades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(129, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(90, 90, 90)
+                .addGap(69, 69, 69)
                 .addComponent(btnSimple)
                 .addGap(18, 18, 18)
                 .addComponent(btnCompuesto)
                 .addGap(18, 18, 18)
                 .addComponent(btnAnualidades)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -99,6 +110,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         anualidad.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnAnualidadesActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        VentanaBonos bono = new VentanaBonos();
+        bono.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,5 +156,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnAnualidades;
     private javax.swing.JToggleButton btnCompuesto;
     private javax.swing.JToggleButton btnSimple;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
